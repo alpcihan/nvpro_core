@@ -29,7 +29,7 @@ To use this code, include `bsdf_functions.h`. When a ray hits a surface:
   See these functions' documentation for more information on their parameters
   and return values.
 
-See the vk_gltf_renderer and vk_mini_samples/gltf_raytrace samples for examples
+See the vk_gltf_renderer and vk_samples/gltf_raytrace samples for examples
 where these functions are used in a Monte Carlo path tracer.
 
 The returned BSDF values and weights have the cosine term from the rendering
@@ -165,7 +165,7 @@ You must provide `data.k1` and `data.k2`, but do not need to provide `data.xi`.
 > Evaluates the simple BSDF model using the given material and input and output directions.
 
 You must provide `data.k1` and `data.xi`. For one sample of pure reflection
-(e.g. vk_mini_samples/ray_trace), use `data.xi == vec2(0,0)`.
+(e.g. vk_samples/ray_trace), use `data.xi == vec2(0,0)`.
 
 After calling this function, you should check if `data.event_type` is
 `BSDF_EVENT_ABSORB`. If so, the sampling code sampled a direction below the
@@ -471,8 +471,8 @@ This is a version of `pcg32i_random_t` from the
 which updates its internal state using a linear congruential generator and
 outputs a hash using `pcg_output_rxs_m_xs_32_32`, a more complex hash.
 
-There's a section of vk_mini_path_tracer on this random number generator
-[here](https://nvpro-samples.github.io/vk_mini_path_tracer/#antialiasingandpseudorandomnumbergeneration/pseudorandomnumbergenerationinglsl).
+There's a section of vk_path_tracer on this random number generator
+[here](https://nvpro-samples.github.io/vk_path_tracer/#antialiasingandpseudorandomnumbergeneration/pseudorandomnumbergenerationinglsl).
 ### Function `rand`
 > Generates a random float in [0, 1], updating an RNG state.
 

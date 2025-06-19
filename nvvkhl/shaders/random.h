@@ -61,8 +61,8 @@ This is a version of `pcg32i_random_t` from the
 which updates its internal state using a linear congruential generator and
 outputs a hash using `pcg_output_rxs_m_xs_32_32`, a more complex hash.
 
-There's a section of vk_mini_path_tracer on this random number generator
-[here](https://nvpro-samples.github.io/vk_mini_path_tracer/#antialiasingandpseudorandomnumbergeneration/pseudorandomnumbergenerationinglsl).
+There's a section of vk_path_tracer on this random number generator
+[here](https://nvpro-samples.github.io/vk_path_tracer/#antialiasingandpseudorandomnumbergeneration/pseudorandomnumbergenerationinglsl).
 @DOC_END */
 uint pcg(inout uint state)
 {
